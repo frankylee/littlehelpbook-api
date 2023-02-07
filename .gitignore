@@ -12,8 +12,10 @@ build/
 # Test related files
 coverage/
 
-# macOS
+# Miscellaneous
 .DS_Store
+*.env
+*.g.dart
 
 # VS Code 
 .vscode/
