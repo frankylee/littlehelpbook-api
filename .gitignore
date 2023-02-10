@@ -9,13 +9,16 @@ pubspec.lock
 build/
 .dart_frog
 
+# Code Generation
+*.g.dart
+*.freezed.dart
+
 # Test related files
 coverage/
 
 # Miscellaneous
 .DS_Store
 *.env
-*.g.dart
 
 # VS Code 
 .vscode/
