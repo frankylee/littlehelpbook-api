@@ -1,6 +1,5 @@
 import 'package:fimber/fimber.dart';
 import 'package:littlehelpbook_api/logic/airtable/airtable_client.dart';
-import 'package:littlehelpbook_api/logic/common/error.dart';
 import 'package:littlehelpbook_api/logic/provider/service_provider.dart';
 import 'package:littlehelpbook_api/logic/provider/service_provider_error.dart';
 import 'package:result_type/result_type.dart';
