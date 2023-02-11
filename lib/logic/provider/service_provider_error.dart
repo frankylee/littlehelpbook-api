@@ -1,8 +1,8 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:littlehelpbook_api/logic/common/error.dart';
 
-part 'service_provider_error.freezed.dart';
-
-@freezed
-class ServiceProviderError with _$ServiceProviderError {
-  factory ServiceProviderError.unexpectedError() = _UnexpectedError;
+/// Service Provider Errors are exceptions raised from the Service Provider
+/// Client.
+class ServiceProviderError extends LittleHelpBookError {
+  ServiceProviderError([String? message, int? statusCode])
+      : super(message, 'ServiceProviderError', statusCode);
 }
