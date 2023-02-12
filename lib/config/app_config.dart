@@ -17,6 +17,9 @@ abstract class AppConfig {
   @EnviedField(varName: 'AIRTABLE_BASE_ID')
   static final airtableBaseId = _AppConfig.airtableBaseId;
 
+  @EnviedField(varName: 'INTERNAL_API_KEY')
+  static final internalApiKey = _AppConfig.internalApiKey;
+
   static String toStr() {
     return '''
       AppConfig(
@@ -27,6 +30,7 @@ abstract class AppConfig {
         ---------------------
         airtableApiKey: $airtableApiKey
         airtableBaseId: $airtableBaseId
+        internalApiKey: $internalApiKey
       )
     ''';
   }
