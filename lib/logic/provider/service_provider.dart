@@ -20,7 +20,7 @@ class ServiceProvider with _$ServiceProvider {
     String? website,
   }) = _ServiceProvider;
 
-  factory ServiceProvider.fromJson(Map<String, Object?> json) =>
+  factory ServiceProvider.fromJson(Map<String, dynamic> json) =>
       _$ServiceProviderFromJson(json);
 
   factory ServiceProvider.fromAirtable(AirtableRecord record) {

@@ -28,15 +28,15 @@ Future<Response> onRequest(RequestContext context) async {
 /// development increases.
 Future<Response> _get(RequestContext context) async {
   try {
-    final ref = context.read<ProviderContainer>();
-    final result = await ref.read(serviceProviderClientProvider.future);
-    if (result.isFailure) {
-      return Response.json(
-        statusCode: result.failure.statusCode,
-        body: result.failure.toJson(),
-      );
-    }
-    return Response.json(body: result.success);
+    final result = await context
+        .read<ProviderContainer>()
+        .read(serviceProviderProvider.future);
+    return result.isSuccess
+        ? Response.json(body: result.success)
+        : Response.json(
+            body: result.failure,
+            statusCode: result.failure.statusCode,
+          );
   } catch (err, stack) {
     Fimber.d(err.toString(), stacktrace: stack);
     return Response.json(

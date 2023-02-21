@@ -5,4 +5,6 @@ import 'package:littlehelpbook_api/logic/common/error.dart';
 class ServiceProviderError extends LittleHelpBookError {
   ServiceProviderError([String? message, int? statusCode])
       : super(message, 'ServiceProviderError', statusCode);
+
+  ServiceProviderError.notFound() : this('Provider does not exist.', 404);
 }

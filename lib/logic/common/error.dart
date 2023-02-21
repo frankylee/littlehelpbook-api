@@ -1,3 +1,5 @@
+import 'dart:io';
+
 /// Little Help Book Errors can be thrown anywhere in the project, allowing
 /// errors to be explicitly handled and raised.
 ///
@@ -12,7 +14,7 @@ class LittleHelpBookError implements Exception {
 
   String error = 'LittleHelpBookError';
   String message = 'Internal Server Error';
-  int statusCode = 500;
+  int statusCode = HttpStatus.internalServerError;
 
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{
